@@ -1,4 +1,11 @@
 version: 0.0
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Free Trial(d9f5e3d2-298c-4d31-acb2-48fd20533ca3)'
+    appType: 'webApp'
+    appName: 'test'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 os: linux
 files:
   - source: /index.html
